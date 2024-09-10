@@ -1,46 +1,34 @@
-import React, { Component } from 'react';
+import React, {useEffect, useState} from 'react';
 
 
-import Structure from "../component/Structure";
+import Structure from "../component/holder/Structure";
+import {apiUrl} from "../component/apiUrl";
+
+export default function Main() {
+
+    const [res, setRes] = useState([]);
+
+    useEffect(() => {
 
 
-class Main extends Component {
-    constructor() {
-        super();
-        this.state={
-            datas: []
-        }
-    }
-
-    componentDidMount() {
-        fetch("https://api.club-named-rapid.xyz/maindata",{
+        fetch(apiUrl+"maindata", {
             "content-type": "application/json"
         })
             .then(res => res.json())
-            .then((x)=>{
-                this.setState((state)=>{
-                    return {
-                        datas: x
-                    };
-                });
-            });
-    }
+            .then((x) => setRes(x));
+    }, []);
 
-    render(){
-        return (
-	<section className="internal-page-wrapper">
-		<div className="container">
+    return (
+        <section className="internal-page-wrapper">
+            <div className="container">
 
                 {
-                    this.state.datas&&this.state.datas.map(data=> (
+                    res && res.map(data => (
                         <Structure data={data} key={data.id}/>
                     ))
                 }
-		</div>
+            </div>
         </section>
-	);
-    }
+    );
 
 }
-
-export default Main;
