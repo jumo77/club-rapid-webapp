@@ -59,13 +59,13 @@ img {
 	text-align: center;	
 }
 .left-side-wrapper {
-  padding-right: 0px;
-  padding-left: 0px;
+  padding-right: 0;
+  padding-left: 0;
 }
 
 .right-side-wrapper {
-  padding-right: 0px;
-  padding-left: 0px;
+  padding-right: 0;
+  padding-left: 0;
 }
 .sixth-heghlight-wrapper .description-wraper {
 	max-width: 250px;
@@ -95,7 +95,7 @@ img {
 	
 }
 .links-wrapper ul li a:after {
-  font-family: "FontAwesome";
+  font-family: "FontAwesome", sans-serif;
   font-weight: 400;
   content: "\f105";
   padding-left: 10px;
@@ -131,13 +131,13 @@ img {
 	color: #fff;
 }
 .watch-more-wrapper a:after {
-  font-family: "FontAwesome";
+  font-family: "FontAwesome", sans-serif;
   font-weight: 900;
   content: "\f144";
   padding-left: 15px;
 }
 .tvshow-logo-wraper {
-	padding: 10px 0 0px;
+	padding: 10px 0 0;
 }
 
 .links-wrapper.white li a {

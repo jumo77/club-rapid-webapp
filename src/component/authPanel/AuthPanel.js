@@ -1,7 +1,7 @@
 import "../../css/auth.css"
 import Register from "./Register";
 import LogIn from "./LogIn";
-import {Component, useEffect} from "react";
+import {useEffect} from "react";
 import {BrowserView, MobileView} from "react-device-detect";
 
 export default function AuthPanel() {
