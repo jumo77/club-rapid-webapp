@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react'
 import StackHolderImTitle from "../component/holder/StackHolderImTitle";
 import TitleHolder from "../component/holder/TitleHolder";
 import StackHolder from "../component/holder/StackHolder";
-import {apiUrl} from "../component/apiUrl";
+import {mobile, apiUrl} from "../component/apiUrl";
 
 export default function Page({title, url, brief}) {
 
@@ -32,7 +32,7 @@ export default function Page({title, url, brief}) {
                         } else {
                             order++;
                         }
-                        if (url === "/mobile") {
+                        if (url === mobile) {
                             return <StackHolderImTitle key={stack.id} stack={stack} order1={order1} order2={order2}/>;
                         } else {
                             return <StackHolder key={stack.id} stack={stack} order1={order1} order2={order2}/>;

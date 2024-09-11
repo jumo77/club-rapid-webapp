@@ -1,5 +1,5 @@
 import {useState} from "react";
-import {apiUrl} from "../apiUrl";
+import {apiUrl, register} from "../apiUrl";
 
 export default function Register({set}) {
 
@@ -53,7 +53,7 @@ export default function Register({set}) {
             grade: grade,
         }
 
-        await fetch(apiUrl + "member", {
+        await fetch(apiUrl + register, {
             method: "POST",
             headers: {
                 "content-type": "application/json"

@@ -14,13 +14,10 @@ import Main  from "./Pages/Main"
 import Profile from "./Pages/Profile";
 import Error from "./Pages/Error";
 import Page from './Pages/Page'
+import {backend, frontend, mobile, profile} from "./component/apiUrl";
 
 
 export default function App() {
-    const backend = "/backend";
-    const frontend = "/frontend";
-    const mobile = "/mobile";
-    const profile = "/profile";
     return (
         <Router>
             <div>
