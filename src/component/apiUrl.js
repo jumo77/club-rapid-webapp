@@ -1,1 +1,1 @@
-export const apiUrl = "http://localhost:8080/";
+export const apiUrl = "https://api.club-named-rapid.xyz/";
